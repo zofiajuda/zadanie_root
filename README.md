@@ -1,5 +1,5 @@
 # zadanie_root
-
+Makra napisane przez Zofia Juda, 05.11.2024
 Folder zawiera makra napisane w środowisku ROOT. Aby móc je uruchomić należy mieć zainstalowane środowisko root.
 
 Makro WidmoCs.C jest wersją podstawową do czytania pliku tekstowego Cs-137.dat, na postawie którego rysuje widmo danych oraz dodatkowo wyznacza znalezione piki. 
