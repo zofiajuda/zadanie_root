@@ -1,3 +1,4 @@
+//Zofia Juda 05.11.2025
 #include <iostream>
 
 void RewriteFile(string name = "Cs-137.dat", string outputname = "output.bin")
