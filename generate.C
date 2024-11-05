@@ -1,3 +1,4 @@
+//Zofia Juda, 05.11.2024
 void generate()
 {
     int n = 100; // liczba binów
