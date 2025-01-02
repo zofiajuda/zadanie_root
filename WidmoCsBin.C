@@ -1,4 +1,4 @@
-//Zofia Juda, 05.11.2024
+
 #include <iostream>
 #include "binary_read.C"
 #include "RewriteFile.C"
@@ -57,7 +57,7 @@ void WidmoCsBin(string inputfile = "Cs-137.dat", string outputfile = "Cs137.bin"
     double nmax[4] = {0, 0, 0, 0};
     double xmax[4];
     TH1F *hCes = new TH1F("hces", "Cs energy spectrum;kanal;liczba zliczen [au]", n, 0, 1024);
-    TFile *rootfile = new TFile("CsWidmo.root", "RECREATE");
+    TFile *rootfile = new TFile("CsWidmoBin.root", "RECREATE");
     TTree *tree = new TTree("piki", "wartosci pików");
     tree->Branch("nmax", &nmax, "nmax/D");
     tree->Branch("xmax", &xmax, "xmax/D");

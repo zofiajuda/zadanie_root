@@ -1,4 +1,4 @@
-//Zofia Juda, 05.11.2024
+
 #include <iostream>
 using namespace std;
 
@@ -49,7 +49,7 @@ void WidmoCs(string name = "Cs-137.dat")
     int nbins = 1024;
 
     TH1F *hCes = new TH1F("hces", "Cs spektrum energetyczne;kanal [au];liczba zliczen", nbins, 0, 1024);
-
+    TFile *rootfile = new TFile("CsWidmo.root", "RECREATE");
     int j = 0;
     float dane[nbins];
     // otwieranie i czytanie z pliku
@@ -64,8 +64,8 @@ void WidmoCs(string name = "Cs-137.dat")
             stringstream ss(line);
             ss >> dane[j];
             // wypelnianie histogramu
-            hCes->SetBinContent(j, dane[j]);
-            hCes->SetBinError(j, sqrt(dane[j]));
+            hCes->SetBinContent(j + 1, dane[j]);
+            hCes->SetBinError(j + 1, sqrt(dane[j]));
             j++;
         }
         file.close();
@@ -140,6 +140,8 @@ void WidmoCs(string name = "Cs-137.dat")
         Compton->Draw();
         pik->Draw();
         jakispik->Draw();
+        hCes->Write();
+        c1->Write();
     }
     else
     {
