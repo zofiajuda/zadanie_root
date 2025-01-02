@@ -66,8 +66,8 @@ void WidmoCsBin(string inputfile = "Cs-137.dat", string outputfile = "Cs137.bin"
     // HISTOGRAM FILLING
     for (int i = 0; i < n; i++)
     {
-        hCes->SetBinContent(i, dane[i]);     // Fill histogram
-        hCes->SetBinError(i, sqrt(dane[i])); // set bin error
+        hCes->SetBinContent(i+1, dane[i]);     // Fill histogram
+        hCes->SetBinError(i+1, sqrt(dane[i])); // set bin error
     }
 
     for (int i = 10; i < n; i++)
